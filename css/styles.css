@@ -1,0 +1,355 @@
+@charset "UTF-8";
+
+:root {
+    --font-a: 'Asap', sans-serif;
+    --font-b: 'Biryani', sans-serif;
+    --font-c: 'Nunito', sans-serif;
+    --color-a: #001542;
+    --color-b: #085454;
+    --color-c: #7A7A7A;
+    --color-d: #FFFFFF;
+    --color-e: #FFB30D;
+}
+
+header { border-bottom: 2px solid var(--color-c); }
+
+.navbar { background-color: var(--color-d) !important; }
+
+.navbar-brand {
+    color: var(--color-a) !important;
+    font-family: var(--font-b);
+    font-size: 2.2em;
+    font-weight: 500;
+}
+
+a.nav-link {
+    color: var(--color-a);
+    font-size: 1.2em;
+    font-family: var(--font-a);
+}
+
+a.nav-link:hover { color: var(--color-c); }
+
+a.nav-link.active { color: var(--color-c); }
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.topic > h1,
+#questions > h1 {
+    color: var(--color-e);
+    font-family: var(--font-b);
+    text-shadow: 2px 2px 2px var(--color-a);
+    font-weight: 600;
+    border-left: 5px solid var(--color-c);
+    padding-left: 10px;
+}
+
+.topic > p {
+    color: var(--color-b);
+    font-family: var(--font-a);
+    font-size: 1.3em;
+}
+
+.topic > button {
+    border: 0px none transparent;
+    background-image: linear-gradient(to right, var(--color-b), var(--color-a));
+    color: var(--color-e);
+    padding: 1rem 3rem;
+    font-family: var(--font-c);
+    font-weight: 500;
+    font-size: 1.4em;
+    border-radius: 10px;
+    transition: background-image 1.2s ease-out, box-shadow 0.8s ease-out;
+}
+
+.topic > button:hover {
+    background-image: linear-gradient(to left, var(--color-b), var(--color-a));
+    box-shadow: 10px 8px 8px var(--color-c);
+}
+
+#ebooks-carousel { box-shadow: -10px -10px 10px var(--color-c); }
+
+.philosophy-tip {
+    background-image: url('../images/filosofia.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--color-d);
+    background-position: center center;
+    display: block;
+    background-attachment: fixed;
+}
+
+.philosophy-tip > h4 {
+    text-align: center;
+    color: var(--color-e);
+    font-size: 2.2em;
+    text-shadow: 3px 3px 5px var(--color-a);
+}
+
+.philosophy-tip > p {
+    color: var(--color-d);
+    text-shadow: 3px 3px 5px var(--color-c);
+    font-family: var(--font-a);
+    text-align: center;
+    font-style: italic;
+    font-size: 2em;
+}
+
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    background-image: linear-gradient(to top, var(--color-c), var(--color-a));
+    border-radius: 15px;
+    padding: 10px;
+    width: 30%;
+}
+
+.service-feature > i {
+    font-size: 3em;
+    transform: translateY(-60%);
+    color: var(--color-e);
+}
+
+.service-feature > p {
+    color: var(--color-d);
+    font-family: var(--font-a);
+}
+
+.service-feature > button {
+    background-color: var(--color-b);
+    border: 0px none transparent;
+    font-size: 1.2em;
+    color: var(--color-d);
+    font-family: var(--font-c);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    margin: 1rem 0rem;
+    transition: background-color 0.2s ease-in, color 0.5s ease-in;
+}
+
+.service-feature > button:hover {
+    background-color: var(--color-c);
+    color: var(--color-b);
+}
+
+.testimonies {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.testimony {
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    background-color: var(--color-b);
+    box-shadow: 4px 4px var(--color-c);
+}
+
+.testimony > i {
+    font-size: 2em;
+    margin-right: 12px;
+    color: var(--color-e);
+}
+
+.testimony > p {
+    color: var(--color-d);
+    font-family: var(--font-a);
+    width: 80%;
+    font-style: italic;
+}
+
+#questions { display: block; }
+
+.accordion-button,
+.accordion-button:focus {
+    background-color: var(--color-d) !important;
+    color: var(--color-b) !important;
+    font-family: var(--font-a) !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-weight: 600;
+}
+
+.accordion-body {
+    background-color: var(--color-d);
+    color: var(--color-c);
+    font-family: var(--font-a);
+    font-style: italic;
+    font-weight: 500;
+    text-shadow: -1px -1px var(--color-a);
+}
+
+.support img { width: 100%; }
+
+aside {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    width: 50%;
+    background-image: linear-gradient(to top, var(--color-c), var(--color-a));
+    position: fixed;
+    top: 20%;
+    left: 25%;
+    border-radius: 20px;
+}
+
+aside > .topic-top {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.topic-top > h1 {
+    color: var(--color-e);
+    font-family: var(--font-b);
+    text-shadow: 2px 2px 2px var(--color-a);
+    font-weight: 600;
+}
+
+.topic-top > button {
+    background-color: transparent;
+    border: 0px none transparent;
+    color: var(--color-e);
+}
+
+.topic-top > button:hover {
+    border-radius: 3px;
+    border: 2px solid var(--color-e);
+}
+
+.topic-top i { font-size: 1.5em; }
+
+.topic-bottom {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.topic-left > p {
+    color: var(--color-d);
+    font-family: var(--font-a);
+    font-style: italic;
+    font-size: 1.3em;
+}
+
+.topic-bottom label {
+    color: var(--color-b);
+    font-family: var(--font-a);
+    font-size: 1.3em;
+    font-weight: 700;
+    text-shadow: 1px 1px var(--color-b);
+}
+
+.topic-bottom input {
+    border: none !important;
+    box-shadow: none !important;
+    color: var(--color-b) !important;
+    font-family: var(--font-a) !important;
+    font-size: 1.1em !important;
+}
+
+.topic-bottom input::placeholder {
+    color: var(--color-b) !important;
+    font-family: var(--font-a) !important;
+    font-size: 1.1em !important;
+}
+
+.topic-bottom button {
+    border: 0px none transparent;
+    font-size: 1.2em;
+    font-family: var(--font-c);
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+    color: var(--color-d);
+    background-color: var(--color-b);
+    transition: background-color 0.2s ease-in, color 0.5s ease-in;
+}
+
+.topic-bottom button:hover {
+    background-color: var(--color-c);
+    color: var(--color-b);
+}
+
+.topic-bottom button > i {
+    font-size: 1.2em;
+    margin-right: 8px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    background-color: var(--color-c);
+}
+
+footer > .middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer > .top > h1 {
+    color: var(--color-b);
+    font-family: var(--font-b);
+    font-size: 1.8em;
+    text-shadow: 1px 1px 3px var(--color-a);
+}
+
+footer h2 {
+    color: var(--color-d);
+    font-family: var(--font-b);
+    font-size: 1.5em;
+    text-shadow: 1px 1px 3px var(--color-a);
+}
+
+.middle > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.middle a {
+    color: var(--color-a);
+    text-decoration: none;
+    font-family: var(--font-a);
+    font-size: 1.1em;
+}
+
+.middle i {
+    font-size: 1.4em;
+    margin-right: 10px;
+}
+
+.middle a:hover {
+    color: var(--color-d);
+    text-decoration: underline;
+    text-decoration-color: var(--color-e);
+    font-style: italic;
+}
