@@ -238,13 +238,13 @@ article > div {
 aside {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: start;
     flex-direction: column;
-    width: 50%;
+    width: 90%;
     background-image: linear-gradient(to top, var(--color-c), var(--color-a));
     position: fixed;
-    top: 20%;
-    left: 25%;
+    top: 10%;
+    left: 5%;
     border-radius: 20px;
 }
 
@@ -260,26 +260,23 @@ aside > .topic-top {
     font-family: var(--font-b);
     text-shadow: 2px 2px 2px var(--color-a);
     font-weight: 600;
+    font-size: 1.3em;
 }
 
 .topic-top > button {
     background-color: transparent;
     border: 0px none transparent;
     color: var(--color-e);
+    font-size: 1.3em;
 }
-
-.topic-top > button:hover {
-    border-radius: 3px;
-    border: 2px solid var(--color-e);
-}
-
-.topic-top i { font-size: 1.5em; }
 
 .topic-bottom {
     display: flex;
     align-items: start;
-    justify-content: space-between;
+    justify-content: left;
 }
+
+.topic-left { display: none; }
 
 .topic-left > p {
     color: var(--color-d);
@@ -289,11 +286,10 @@ aside > .topic-top {
 }
 
 .topic-bottom label {
-    color: var(--color-b);
+    color: var(--color-d);
     font-family: var(--font-a);
     font-size: 1.3em;
-    font-weight: 700;
-    text-shadow: 1px 1px var(--color-b);
+    font-weight: 500;
 }
 
 .topic-bottom input {
@@ -302,6 +298,7 @@ aside > .topic-top {
     color: var(--color-b) !important;
     font-family: var(--font-a) !important;
     font-size: 1.1em !important;
+    width: 100%;
 }
 
 .topic-bottom input::placeholder {
@@ -309,6 +306,8 @@ aside > .topic-top {
     font-family: var(--font-a) !important;
     font-size: 1.1em !important;
 }
+
+.topic-bottom input:focus { border: 2px solid var(--color-e) !important; }
 
 .topic-bottom button {
     border: 0px none transparent;
@@ -480,4 +479,22 @@ footer h2 {
     }
 
     .middle i { font-size: 1.6em; }
+
+    aside {
+        width: 50%;
+        left: 25%; 
+    }
+
+    .topic-top > h1 { font-size: 1.8em; }
+
+    .topic-top { font-size: 1.5em; }
+
+    .topic-bottom label { cursor: pointer; }
+
+    .topic-top > button:hover {
+        border-radius: 3px;
+        border: 2px solid var(--color-e);
+    }
+
+    .topic-left { display: block; }
 }
