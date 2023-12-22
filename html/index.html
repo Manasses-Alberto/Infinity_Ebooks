@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="../css/styles.css">
     </head>
     <body>
-        <header class="main-tags">
+        <header class="main-tags container-fluid">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                   <a class="navbar-brand mr-3" href="#">InfinityEbooks</a>
@@ -40,12 +40,12 @@
         </header>
         <main class="main-tags">
             <article>
-                <div class="topic col-6 p-2">
+                <div class="topic col-12 col-md-6 p-2">
                     <h1 class="text-lg">Obtenha todo o poder do conhecimento com nossos ebooks!</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat assumenda repellendus corrupti dolorem odio, tenetur, asperiores deleniti quia nisi magnam illo officia sit vel quisquam sunt doloribus? Quos, aut pariatur!</p>
                     <button type="button" id="buy-ebooks-btn">Comprar ebooks</button>
                 </div>
-                <div id="ebooks-carousel" class="carousel slide col-6" data-bs-ride="carousel">
+                <div id="ebooks-carousel" class="carousel slide col-md-6 col-10" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                         <img src="../images/+espertoqueodiabo.jpg" class="d-block w-100" alt="+ Esperto que o Diabo">
@@ -77,7 +77,7 @@
                     </div>
                   </div>
             </article>
-            <article class="philosophy-tip my-5 p-5" id="ebook-topics">
+            <article class="philosophy-tip my-5 p-4 p-md-5" id="ebook-topics">
 			          <h4>Porquê ler os nossos ebooks?</h4>
                 <p>"Os inteligentes são aqueles que aprendem com seus próprios erros, os sábios são aqueles que aprendem com os erros dos outros!" - Confúcio Filosofo Chinês</p>
             </article>
@@ -99,19 +99,19 @@
               </div>
             </article>
             <article id="testimony" class="testimonies my-5">
-              <div class="testimony col-6 p-3 my-2">
+              <div class="testimony col-md-6 col-12 p-3 my-2">
                 <i class="bi bi-person-circle"></i>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dolorem nihil eos rem debitis fugiat optio illo fugit, maiores tempore amet consequatur ratione aut quo ad magni quasi maxime dolor.</p>
               </div>
-              <div class="testimony col-6 p-3 my-2">
+              <div class="testimony col-md-6 col-12 p-3 my-2">
                 <i class="bi bi-person-circle"></i>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dolorem nihil eos rem debitis fugiat optio illo fugit, maiores tempore amet consequatur ratione aut quo ad magni quasi maxime dolor.</p>
               </div>
-              <div class="testimony col-6 p-3 my-2">
+              <div class="testimony col-md-6 col-12 p-3 my-2">
                 <i class="bi bi-person-circle"></i>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dolorem nihil eos rem debitis fugiat optio illo fugit, maiores tempore amet consequatur ratione aut quo ad magni quasi maxime dolor.</p>
               </div>
-              <div class="testimony col-6 p-3 my-2">
+              <div class="testimony col-md-6 col-12 p-3 my-2">
                 <i class="bi bi-person-circle"></i>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dolorem nihil eos rem debitis fugiat optio illo fugit, maiores tempore amet consequatur ratione aut quo ad magni quasi maxime dolor.</p>
               </div>
@@ -123,7 +123,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Como vou fazer o pagamento?</button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionQuestions">
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionQuestions">
                     <div class="accordion-body">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nostrum ex iusto minima dolorem eum. Magnam quos est dolorum dolor nam. Maiores magnam corporis cupiditate error consectetur doloribus ipsa natus?
                     </div>
@@ -171,15 +171,10 @@
                 </div>
               </div>
             </article>
-            <article id="support">
-              <div class="topic col-8">
-                <h1 class="mb-5">Precisando de ajuda?</h1>
-                <p class="my-5 p-4">Entre em contacto com a nossa equipe de atendimento e receba o apoio que precisa. Assim todas as suas dúvidas serão resolvidas!</p>
-                <button class="mt-5"><i class="bi bi-whatsapp"></i>Entrar em contacto</button>
-              </div>
-              <div class="col-4">
-                <img src="../images/whatsapp.png" alt="Whatsapp">
-              </div>
+            <article id="support" class="d-flex flex-column justify-content-left align-items-left">
+              <h1 class="mb-3 text-left w-100">Precisando de ajuda?</h1>
+              <p class="my-3 p-2">Entre em contacto com a nossa equipe de atendimento e receba o apoio que precisa. Assim todas as suas dúvidas serão resolvidas!</p>
+              <button class="my-3"><i class="bi bi-whatsapp"></i>Entrar em contacto</button>
             </article>
         </main>
         <aside class="p-5 visually-hidden" id="modal-squeeze">
@@ -202,24 +197,24 @@
             </form>
           </div>
         </aside>
-        <footer class="p-5 main-tags">
-          <div class="top">
+        <footer class="p-5 main-tags container-fluid">
+          <div class="top col-12 mb-5">
             <h1>InfinityEbooks</h1>
           </div>
-          <div class="middle">
-            <div class="col-3">
+          <div class="middle col-12">
+            <div class="col-md-3 col-12 mb-5">
               <h2>Links úteis</h2>
               <a href="#ebook-topics" class="my-2">Sobre</a>
               <a href="#support" class="my-2">Atendimento</a>
               <a href="#questions" class="my-2">Perguntas frequentes</a>
             </div>
-            <div class="col-3">
+            <div class="col-md-3 col-12 mb-5">
               <h2>Social</h2>
               <a href="#" class="my-2"><i class="bi bi-facebook"></i>Facebook</a>
               <a href="#" class="my-2"><i class="bi bi-instagram"></i>Instagram</a>
               <a href="#" class="my-2"><i class="bi bi-twitter-x"></i>Twitter</a>
             </div>
-            <div class="col-3">
+            <div class="col-md-3 col-12">
               <h2>Direitos</h2>
               <a href="#" class="my-2">Licença oficial do M.I.T</a>
               <a href="#" class="my-2">Copyright &copy; todos direitos reservados</a>

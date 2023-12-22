@@ -45,7 +45,14 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    flex-direction: column;
+}
+
+article > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .topic > h1,
@@ -54,17 +61,18 @@ article {
     font-family: var(--font-b);
     text-shadow: 2px 2px 2px var(--color-a);
     font-weight: 600;
-    border-left: 5px solid var(--color-c);
-    padding-left: 10px;
+    text-align: center;
 }
 
 .topic > p {
     color: var(--color-b);
     font-family: var(--font-a);
     font-size: 1.3em;
+    text-align: center;
 }
 
-.topic > button {
+.topic > button,
+#support > button {
     border: 0px none transparent;
     background-image: linear-gradient(to right, var(--color-b), var(--color-a));
     color: var(--color-e);
@@ -76,12 +84,10 @@ article {
     transition: background-image 1.2s ease-out, box-shadow 0.8s ease-out;
 }
 
-.topic > button:hover {
-    background-image: linear-gradient(to left, var(--color-b), var(--color-a));
-    box-shadow: 10px 8px 8px var(--color-c);
+#ebooks-carousel {
+    margin: 1rem 0rem;
+    border: 2px solid var(--color-a);
 }
-
-#ebooks-carousel { box-shadow: -10px -10px 10px var(--color-c); }
 
 .philosophy-tip {
     background-image: url('../images/filosofia.jpg');
@@ -89,8 +95,8 @@ article {
     background-size: cover;
     background-color: var(--color-d);
     background-position: center center;
-    display: block;
     background-attachment: fixed;
+    display: block;
 }
 
 .philosophy-tip > h4 {
@@ -104,15 +110,9 @@ article {
     color: var(--color-d);
     text-shadow: 3px 3px 5px var(--color-c);
     font-family: var(--font-a);
-    text-align: center;
+    text-align: left;
     font-style: italic;
     font-size: 2em;
-}
-
-.services {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .service-feature {
@@ -123,11 +123,13 @@ article {
     background-image: linear-gradient(to top, var(--color-c), var(--color-a));
     border-radius: 15px;
     padding: 10px;
-    width: 30%;
+    width: 90%;
+    margin-bottom: 2.7rem;
+    box-shadow: 3px 3px var(--color-a);
 }
 
 .service-feature > i {
-    font-size: 3em;
+    font-size: 3.4em;
     transform: translateY(-60%);
     color: var(--color-e);
 }
@@ -135,23 +137,20 @@ article {
 .service-feature > p {
     color: var(--color-d);
     font-family: var(--font-a);
+    font-size: 1.3em;
+    text-align: center;
 }
 
 .service-feature > button {
     background-color: var(--color-b);
     border: 0px none transparent;
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: var(--color-d);
     font-family: var(--font-c);
-    padding: 0.5rem 1rem;
+    padding: 1rem 1.5rem;
     border-radius: 10px;
     margin: 1rem 0rem;
     transition: background-color 0.2s ease-in, color 0.5s ease-in;
-}
-
-.service-feature > button:hover {
-    background-color: var(--color-c);
-    color: var(--color-b);
 }
 
 .testimonies {
@@ -166,6 +165,7 @@ article {
     display: flex;
     align-items: start;
     justify-content: left;
+    flex-direction: row !important;
     background-color: var(--color-b);
     box-shadow: 4px 4px var(--color-c);
 }
@@ -184,6 +184,14 @@ article {
 }
 
 #questions { display: block; }
+
+#questions > h1 {
+    text-align: left;
+}
+.accordion,
+.accordion-item {
+    width: 100%;
+}
 
 .accordion-button,
 .accordion-button:focus {
@@ -204,7 +212,28 @@ article {
     text-shadow: -1px -1px var(--color-a);
 }
 
-.support img { width: 100%; }
+#support > h1 {
+    color: var(--color-e);
+    font-family: var(--font-b);
+    text-shadow: 2px 2px 2px var(--color-a);
+    font-weight: 600;
+    text-align: center;
+}
+
+#support > p {
+    color: var(--color-b);
+    font-family: var(--font-a);
+    font-size: 1.3em;
+    text-align: center;
+}
+
+#support button {
+    font-size: 1em;
+}
+
+#support i {
+    margin-right: 8px;
+}
 
 aside {
     display: flex;
@@ -305,22 +334,25 @@ aside > .topic-top {
 footer {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
     background-color: var(--color-c);
 }
 
 footer > .middle {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
 }
 
+footer > .top { border-bottom: 2px solid var(--color-e); }
+
 footer > .top > h1 {
-    color: var(--color-b);
+    color: var(--color-a);
     font-family: var(--font-b);
     font-size: 1.8em;
-    text-shadow: 1px 1px 3px var(--color-a);
+    text-shadow: 1px 1px 3px var(--color-b);
 }
 
 footer h2 {
@@ -328,18 +360,22 @@ footer h2 {
     font-family: var(--font-b);
     font-size: 1.5em;
     text-shadow: 1px 1px 3px var(--color-a);
+    text-align: center;
 }
 
 .middle > div {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .middle a {
     color: var(--color-a);
     text-decoration: none;
     font-family: var(--font-a);
-    font-size: 1.1em;
+    font-size: 1.3em;
+    text-align: center;
 }
 
 .middle i {
@@ -352,4 +388,96 @@ footer h2 {
     text-decoration: underline;
     text-decoration-color: var(--color-e);
     font-style: italic;
+}
+
+@media screen and (min-width: 992px) {
+    article {
+        flex-direction: row;
+        width: 60%;
+    }
+
+    .topic > h1,
+    #questions > h1 {
+        border-left: 5px solid var(--color-c);
+        padding-left: 10px;
+        text-align: left;
+    }
+
+    .topic > p { text-align: left; }
+
+    .topic > button:hover,
+    #support > button:hover {
+        background-image: linear-gradient(to left, var(--color-b), var(--color-a));
+        box-shadow: 10px 8px 8px var(--color-c);
+    }
+    
+    .topic  {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: left !important;
+        justify-content: left !important;
+    }
+
+    #ebooks-carousel {
+        box-shadow: -10px -10px 10px var(--color-c);
+        border: none;
+    }
+
+    .philosophy-tip > p { text-align: center; }
+
+    .services { justify-content: space-between; }
+    
+    .service-feature {
+        margin: 0px;
+        width: 30%;
+        box-shadow: none;
+    }
+
+    .service-feature > i { font-size: 3em; }
+
+    .service-feature > p {
+        text-align: left;
+        font-size: 1.1em;
+    }
+
+    .service-feature > button {
+        font-size: 1.2em;
+        padding: 0.5rem 1rem;
+    }
+
+    .service-feature > button:hover {
+        background-color: var(--color-c);
+        color: var(--color-b);
+    }
+
+    #support p { width: 70%; }
+
+    #support button { font-size: 1.4em; }
+
+    footer {
+        align-items: left;
+        justify-content: left;
+    }
+
+    footer > .middle {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    footer h2 { text-align: left; }
+
+    footer h2 { text-align: left; }
+
+    .middle > div {
+        align-items: start;
+        justify-content: left;
+    }
+
+    .middle a {
+        font-size: 1.1em;
+        text-align: left;
+    }
+
+    .middle i { font-size: 1.6em; }
 }
